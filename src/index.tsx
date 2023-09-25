@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+import { Routes } from './components/shared/Routes';
+
+ReactDOM.render(
+    <Routes />,
   document.getElementById('root') as HTMLElement
 );
 
