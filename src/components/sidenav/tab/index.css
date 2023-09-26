@@ -1,0 +1,21 @@
+.tab-container {
+  width: 180px;
+  background: #c0c0c0;
+  border-radius: 0 6px 0 0;
+  margin-top: 10px;
+}
+
+.items {
+  background: silver;
+  color: #000;
+}
+
+.item {
+  border: 1px solid #afafaf;
+  cursor: pointer;
+  padding: 1px 5px;
+}
+
+.item:hover {
+  color: white;
+}

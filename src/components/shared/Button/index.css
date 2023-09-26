@@ -1,0 +1,14 @@
+.checkbox {
+  font-weight: bolder;
+
+}
+
+.label {
+  color: black;
+  font-size: 13px;
+}
+
+.required {
+  color: red;
+  font-size: 16px;
+}

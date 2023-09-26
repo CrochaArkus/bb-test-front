@@ -1,0 +1,5 @@
+.container {
+  background-image: url('../../shared/../../assets/topbar-gray-figure.PNG');
+  background-size: contain;
+  height: 64px;
+}

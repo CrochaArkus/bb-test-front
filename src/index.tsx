@@ -1,11 +1,24 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
 import { Routes } from './components/shared/Routes';
+import { Topbar } from './components/shared/Topbar';
+import { Sidenav } from './components/shared/Sidenav';
+
+import './index.css';
 
 ReactDOM.render(
-    <Routes />,
+  <div className='root-background'>
+    <div className='root-container'>
+      <Topbar />
+      <div className='root-content'>
+      <div className='root-sidenav'>
+        <Sidenav />
+      </div>
+      <Routes />
+      </div>
+    </div>
+  </div>,
   document.getElementById('root') as HTMLElement
 );
 
