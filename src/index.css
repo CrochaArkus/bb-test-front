@@ -31,6 +31,10 @@ code {
     monospace;
 }
 
+.hidden {
+  display: none;
+}
+
 .root-container {
   width: 55%;
   margin: 0 auto;
@@ -48,4 +52,9 @@ code {
   width: 225px;
   background: var(--primary-gray);
   border-radius: 0 0 15px 15px;
+}
+
+.page-content {
+  width: calc(100% - 225px);
+  padding: 15px;
 }

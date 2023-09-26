@@ -4,6 +4,7 @@ import { Button } from '../../../components/shared/Button/index';
 import { Select } from '../../../components/shared/Select';
 import { CHECKBOX_LABEL_NOT_REQIRED_TEXT, CHECKBOX_LABEL_REQUIRED_TEXT, BUTTON_LABEL, SELECT_OPTIONS } from './constants';
 import { TextInput } from '../../../components/shared/TextInput';
+import { Image } from '../../../components/shared/Image';
 
 export const Test = memo(() => {
   const [checkedRequired, setCheckedRequired] = useState(false)
@@ -37,6 +38,10 @@ export const Test = memo(() => {
     setInputTextRequired(ev.target.value);
   }
 
+  const openModal = () => {
+    alert('open modal');
+  }
+
   return (
     <div>
       <h1>Checkboxes</h1>
@@ -66,6 +71,10 @@ export const Test = memo(() => {
       <TextInput id="test-input" label="not required" value={inputText} onchange={handleInputChange} />
       <TextInput id="test-input-required" label="required" value={inputTextRequired} onchange={handleInputRequiredChange} required />
       <hr />
+
+      <h1>Image Container</h1>
+      <Image image={''} addImage={openModal} />
+      <Image image={'https://habitatweb.mx/wp-content/uploads/2015/08/webapp.png'} addImage={openModal} />
     </div>
   )
 })

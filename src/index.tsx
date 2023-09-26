@@ -15,7 +15,9 @@ ReactDOM.render(
       <div className='root-sidenav'>
         <Sidenav />
       </div>
-      <Routes />
+      <div className='page-content'>
+        <Routes />
+      </div>
       </div>
     </div>
   </div>,
