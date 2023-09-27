@@ -5,13 +5,14 @@ import { Select } from '../../../components/shared/Select';
 import { CHECKBOX_LABEL_NOT_REQIRED_TEXT, CHECKBOX_LABEL_REQUIRED_TEXT, BUTTON_LABEL, SELECT_OPTIONS } from './constants';
 import { TextInput } from '../../../components/shared/TextInput';
 import { Image } from '../../../components/shared/Image';
+import { Modal } from '../../../components/shared/Modal';
 
 export const Test = memo(() => {
   const [checkedRequired, setCheckedRequired] = useState(false)
   const [checkedNotRequired, setCheckedNotRequired] = useState(false)
   const [inputText, setInputText] = useState('')
   const [inputTextRequired, setInputTextRequired] = useState('')
-
+  const [modalOpen, setModalOpen] = useState(false)
   
   const handleCheckedRequired = (ev: React.ChangeEvent<HTMLInputElement>) => {
     alert(ev.target.value);
@@ -39,8 +40,19 @@ export const Test = memo(() => {
   }
 
   const openModal = () => {
-    alert('open modal');
+    setModalOpen(true)
   }
+
+  const modalBody = (
+      <div>
+        <h1>Modal body</h1>
+      </div>
+    )
+
+    const handleModalClose = () => {
+      setModalOpen(false)
+    }
+  
 
   return (
     <div>
@@ -75,6 +87,11 @@ export const Test = memo(() => {
       <h1>Image Container</h1>
       <Image image={''} addImage={openModal} />
       <Image image={'https://habitatweb.mx/wp-content/uploads/2015/08/webapp.png'} addImage={openModal} />
+      <hr />
+
+      <h1>Modal</h1>
+      <Modal modalHeader='Select an image from the list or upload a new image:' modalBody={modalBody} isOpen={modalOpen} closeModal={handleModalClose} />
+      <hr />
     </div>
   )
 })

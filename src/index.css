@@ -13,6 +13,11 @@ button {
   height: 64px;
 }
 
+html {
+  background-image: url('assets/page-background.PNG') !important;
+  background-attachment: fixed !important;
+}
+
 body {
   margin: 0;
   font-size: 12px;
@@ -23,7 +28,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url('assets/page-background.PNG') !important;
-  background-attachment: scroll !important;
+  background-attachment: fixed !important;
 }
 
 code {
@@ -41,6 +46,8 @@ code {
   background: linear-gradient(to right,
       #1c1c1c 0%,
       var(--secondary-gray) 225px);
+  margin-bottom: 30px;
+
 }
 
 .root-content {
