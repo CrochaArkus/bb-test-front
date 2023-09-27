@@ -15,8 +15,8 @@ export const Select = memo(({ options, onchange, label, required = false }: Sele
     <div className="uk-form-select select" data-uk-form-select>
     <div>{label} {required && <span className='required'>*</span>}</div>
     
-    <select onChange={onchange}>
-        <option value="" disabled selected>Choose One...</option>
+    <select onChange={onchange} defaultValue=''>
+        <option value="" disabled>Choose One...</option>
         {options.map((option) => (
             <option key={option.value} value={option.value}>{option.label}</option>
         ))}

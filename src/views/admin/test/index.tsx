@@ -2,10 +2,11 @@ import { memo, useState } from 'react'
 import { CheckBox } from '../../../components/shared/CheckBox'
 import { Button } from '../../../components/shared/Button/index';
 import { Select } from '../../../components/shared/Select';
-import { CHECKBOX_LABEL_NOT_REQIRED_TEXT, CHECKBOX_LABEL_REQUIRED_TEXT, BUTTON_LABEL, SELECT_OPTIONS } from './constants';
+import { CHECKBOX_LABEL_NOT_REQIRED_TEXT, CHECKBOX_LABEL_REQUIRED_TEXT, BUTTON_LABEL, SELECT_OPTIONS, ITEMS, HEADERS_TRANSLATE } from './constants';
 import { TextInput } from '../../../components/shared/TextInput';
 import { Image } from '../../../components/shared/Image';
 import { Modal } from '../../../components/shared/Modal';
+import { Catalog } from '../../../components/shared/Catalog';
 
 export const Test = memo(() => {
   const [checkedRequired, setCheckedRequired] = useState(false)
@@ -84,13 +85,14 @@ export const Test = memo(() => {
       <TextInput id="test-input-required" label="required" value={inputTextRequired} onchange={handleInputRequiredChange} required />
       <hr />
 
-      <h1>Image Container</h1>
+      <h1>Image Container / Modal</h1>
       <Image image={''} addImage={openModal} />
       <Image image={'https://habitatweb.mx/wp-content/uploads/2015/08/webapp.png'} addImage={openModal} />
+      <Modal modalHeader='Select an image from the list or upload a new image:' modalBody={modalBody} isOpen={modalOpen} closeModal={handleModalClose} />
       <hr />
 
-      <h1>Modal</h1>
-      <Modal modalHeader='Select an image from the list or upload a new image:' modalBody={modalBody} isOpen={modalOpen} closeModal={handleModalClose} />
+      <h1>Catalog</h1>
+      <Catalog headers={HEADERS_TRANSLATE} ignoreValues={['category']} items={ITEMS} editFunction={() => {}} />
       <hr />
     </div>
   )

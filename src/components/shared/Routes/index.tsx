@@ -16,7 +16,7 @@ export const Routes = () => {
         <Route exact={true} path="/admin/home">
           <AdminHome />
         </Route>
-        <Route exact={true} path="/2">
+        <Route exact={true} path="/components">
           <Test />
         </Route>
         <Route>
