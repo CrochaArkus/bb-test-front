@@ -1,0 +1,29 @@
+.select-file-container {
+  width: 100%;
+  background: #888;
+  padding: 3px;
+}
+
+.select-file-tab {
+  padding: 1px 2px;
+  background: #fff;
+  border-radius: 5px 5px 0 0;
+  margin: 0 2px;
+  background: #c5c5c5;
+  color: #fff;
+  font-weight: 600;
+}
+
+.image-list {
+  background-color: #fff;
+  height: 90%;
+}
+
+.select-file-item {
+  width: 100%;
+  border: 1px dashed #c5c5c5;
+}
+
+.choose-image {
+  padding: 10px 0;
+}

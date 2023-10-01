@@ -44,11 +44,13 @@ export const Test = memo(() => {
     setModalOpen(true)
   }
 
-  const modalBody = (
+  const modalBody = () => {
+    return (
       <div>
         <h1>Modal body</h1>
       </div>
     )
+  }
 
     const handleModalClose = () => {
       setModalOpen(false)
@@ -58,8 +60,8 @@ export const Test = memo(() => {
   return (
     <div>
       <h1>Checkboxes</h1>
-      <CheckBox id="test-required" label={CHECKBOX_LABEL_REQUIRED_TEXT} value="test" checked={checkedRequired} onchange={handleCheckedRequired} />
-      <CheckBox id="test-not-required" label={CHECKBOX_LABEL_NOT_REQIRED_TEXT} value="test" checked={checkedNotRequired} onchange={handleCheckedNotRequired} required={true}/>
+      <CheckBox id="test-required" label={CHECKBOX_LABEL_REQUIRED_TEXT} checked={checkedRequired} onchange={handleCheckedRequired} />
+      <CheckBox id="test-not-required" label={CHECKBOX_LABEL_NOT_REQIRED_TEXT} checked={checkedNotRequired} onchange={handleCheckedNotRequired} required={true}/>
       <div>
         <hr />
         <div>id: is the given id to the checkbox.</div>

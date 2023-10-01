@@ -26,11 +26,34 @@ export const HEADERS_TRANSLATE = [
     width: '15%'
   }
 ];
+
+export const HEADERS_CONTENT = [
+  {
+    property: 'title',
+    label: 'Title',
+    width: '50%'
+  },{
+    property: 'category',
+    label: 'Category',
+    width: '10%'
+  },{
+    property: 'display',
+    label: 'Display',
+    width: '10%'
+  },{
+    property: 'unlocked',
+    label: 'Unlocked',
+    width: '10%'
+  }
+]
+
 export const ITEMS = [{
+  id: 1,
   name: 'value1',
   display: 'value2',
   sort: 'value3',
 },{
+  id: 2,
   name: 'value11',
   display: 'value22',
   sort: 'value33',

@@ -8,6 +8,8 @@
 .items {
   background: silver;
   color: #000;
+  display: flex;
+  flex-direction: column;
 }
 
 .item {
@@ -18,4 +20,13 @@
 
 .item:hover {
   color: white;
+}
+
+.active {
+  background: red;
+}
+
+.active a {
+  color: #fff !important;
+  text-decoration: none;
 }

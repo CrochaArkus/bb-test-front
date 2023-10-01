@@ -4,12 +4,13 @@ import './index.css'
 
 interface ModalProps {
   modalHeader: string
-  modalBody: JSX.Element
+  modalBody: ((props: any) => JSX.Element)
   isOpen: boolean
-  closeModal: () => void
+  closeModal: () => void,
+  setImage?: (image: any) => void
 }
 
-export const Modal = memo(({modalHeader, modalBody, isOpen = false, closeModal}: ModalProps) => {
+export const Modal = memo(({modalHeader, modalBody, isOpen = false, closeModal, setImage = ()=>{}}: ModalProps) => {
   return (
     <div className='modal' style={{ display: isOpen ? 'inherit' : 'none' }}>
       <div className='background'></div>
@@ -19,7 +20,7 @@ export const Modal = memo(({modalHeader, modalBody, isOpen = false, closeModal}:
           <span className='close' onClick={closeModal}>X</span>
         </div>
         <div className='modal-body'>
-          {modalBody}
+          {modalBody({ closeModal, setImage })}
         </div>
         <div className='modal-footer'>
         </div>

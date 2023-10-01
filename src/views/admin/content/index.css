@@ -1,0 +1,38 @@
+.search {
+  height: fit-content;
+  width: auto !important;
+}
+
+.categories-container {
+  display: flex;
+  line-height: 0;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 5px 0;
+}
+
+.sub-categories-container {
+  display: flex;
+  line-height: 0;
+  align-items: flex-end;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.sub-categories-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-category-button {
+  margin: 3px 0;
+}
+
+.upper-catalog-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.upper-catalog-menu>* {
+  margin: 0 5px;
+}

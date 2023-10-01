@@ -12,7 +12,7 @@ interface CatalogProps {
   items: any[],
   headers: headerTranslate[],
   ignoreValues: string[],
-  editFunction?: (item: any) => void,
+  editFunction?: (id: any) => void,
   deleteFunction?: (item: any) => void
 }
 
@@ -25,6 +25,7 @@ export const Catalog = memo(({items, headers, ignoreValues, editFunction, delete
 
   items.forEach(item => {
     const tempSanitizedItems = Object.keys(item).map(key => {
+      if (key === 'id') return item[key]
       return ignoreValues.indexOf(key) > -1 ? null : item[key]
     }).filter(item => item)
     
@@ -54,13 +55,19 @@ export const Catalog = memo(({items, headers, ignoreValues, editFunction, delete
               <tr key={index}>
                 {
                     sanitizedItem.map((item, index) => {
-                      return (
-                        <td key={index}>{item}</td>
-                      )
+                      if (isNaN(parseInt(item))) {
+                        return (
+                          <td key={index}>{item}</td>
+                        )
+                      }
                     })
                 }
-                {editFunction && <td key={index} onClick={editFunction}>Edit</td>}
-                {deleteFunction && <td key={index} onClick={deleteFunction}>Delete</td>}
+                {editFunction && <td key={index} onClick={() => editFunction(sanitizedItem)} className='edit-button'>
+                  <img src="https://img.icons8.com/material-outlined/24/000000/edit--v1.png" alt='edit' /> 
+                  </td>}
+                {deleteFunction && <td key={index} onClick={() => deleteFunction(sanitizedItem)} className='edit-button'>
+                  <img src="https://img.icons8.com/material-outlined/24/000000/delete--v1.png" alt='delete' />  
+                </td>}
               </tr>
             );
           })}

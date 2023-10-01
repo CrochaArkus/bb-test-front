@@ -31,3 +31,8 @@
   background-size: contain;
   cursor: pointer;
 }
+
+.image-title {
+  font-weight: bolder;
+  color: #000;
+}

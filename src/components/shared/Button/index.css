@@ -1,6 +1,9 @@
+.button {
+  margin: 0 10px;
+}
+
 .checkbox {
   font-weight: bolder;
-
 }
 
 .label {

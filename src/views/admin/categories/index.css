@@ -1,0 +1,28 @@
+.search {
+  height: fit-content;
+  width: auto !important;
+}
+
+.categories-container {
+  display: flex;
+  line-height: 0;
+  align-items: center;
+  justify-content: space-evenly
+}
+
+.sub-categories-container {
+  display: flex;
+  line-height: 0;
+  align-items: flex-end;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.sub-categories-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-category-button {
+  margin: 3px 0;
+}

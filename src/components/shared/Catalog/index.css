@@ -13,3 +13,11 @@
   padding: 10px;
   border: 1px solid #252525;
 }
+
+.edit-button {
+  padding: 4px !important;
+}
+
+.edit-button>img {
+  cursor: pointer;
+}
